@@ -7,9 +7,9 @@ tg.MainButton.color = "#2cab37";
 
 let item = "";
 
-let btn_nigger = document.getElementByID("btn_nigger");
+let btn1 = document.getElementByID("btn_nigger");
 
-btn_nigger.addEventListener("click", function() {
+btn1.addEventListener("click", function() {
 	if (tg.MainButton.isVisible) {
 		tg.MainButton.hide();
 	}
