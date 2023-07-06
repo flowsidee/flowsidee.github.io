@@ -65,7 +65,7 @@
 		<div class="inner">
 			<div class="item">
 				<img src="nigger.jpg" alt="Nigger_btn" class="img">
-				<button class="btn" id="btn1">Buy Nigger</button>
+				<button class="btn" id="btn12">Buy Nigger</button>
 			</div>
 		</div>
 	</div>
@@ -74,24 +74,26 @@
 		let tg = window.Telegram.WebApp;
 
 
-		tg.MainButton.text = 'gg';
-		tg.MainButton.show();
 
 		tg.MainButton.textColor = "#FFFFF";
 		tg.MainButton.color = "#2cab37";
-		tg.MainButton.setText("Вы нег!");
-		alert('Вы успешно вошли');
+		tg.MainButton.show();
 
 		let item = "";
 
-		let btn1 = document.getElementById("btn1");
+		let btn1 = document.getElementById("btn12");
 
-		btn1.addEventListener("click", function() {
-			alert('Вы успешно вошли');
+
+		btn1.addEventListener('click', function(){
+			if (tg.MainButton.isVisible){
+				tg.MainButton.hide()
+			}
+			else{
 			tg.MainButton.setText("Вы нег!");
-			item = "1";
-			tg.MainButton.show();
-		})
+				tg.MainButton.show()
+			}
+			});
+
 
 		Telegram.WebApp.onEvent("mainButtonClicked", function(){
 			tg.sendData(item);
