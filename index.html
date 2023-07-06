@@ -26,7 +26,7 @@
 		}
 
 		.container {
-			max-width: 390px;
+			max-width: 190px;
 		}
 
 		.inner {
@@ -70,13 +70,15 @@
 		</div>
 	</div>
 
-	<script>
+	<script type="application/javascript">
 		let tg = window.Telegram.WebApp;
 
 		tg.expand();
 
 		tg.MainButton.textColor = "#FFFFF";
 		tg.MainButton.color = "#2cab37";
+		tg.MainButton.setText("Вы нег!");
+		alert('Вы успешно вошли');
 
 		let item = "";
 
