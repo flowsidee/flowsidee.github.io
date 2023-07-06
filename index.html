@@ -4,7 +4,61 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="test.css">
-	<title>Толя IQ</title>
+	<title>Nigger Аукцион</title>
+
+
+	<script src="https://telegram.org/js/telegram-web-app.js?1"></script>
+	<script>
+		function setThemeClass() {
+			document.documentElement.className = Telegram.WebApp.colorScheme;
+		}
+		Telegram.WebApp.onEvent('themeChanged', setThemeClass);
+		setThemeClass();
+	</script>
+
+	<style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+			font-size: 18px;
+			color: var(--tg-theme-text-color);
+			background: var(--tg-theme-bg-color)
+		}
+
+		.container {
+			max-width: 390px;
+		}
+
+		.inner {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 200px 200px 200px;
+		}
+
+		.img {
+			width: 150px;
+		}
+
+		.item {
+			text-align: center;
+		}
+
+		.btn {
+			display: inline-block;
+			padding: 10px 20px;
+			border: none;
+			background: rgb(248, 168, 24);
+			border-radius: 10px;
+			color: #fff;
+			text-transform: uppercase;
+			font-weight: 700;
+			transition: background .2s linear;
+		}
+
+		.btn:hover {
+			background: lightgreen;
+		}
+	</style>
 </head>
 <body>
 	<div class="container">
@@ -16,7 +70,6 @@
 		</div>
 	</div>
 
-	<script src="https://telegram.org/js/telegram-web-app.js"></script>
 	<script>
 		let tg = window.Telegram.WebApp;
 

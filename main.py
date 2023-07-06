@@ -36,10 +36,10 @@ async def mm_start(message: types.Message, state: FSMContext):
 
 	await message.answer('.', reply_markup=kb_menu())
 
-@dp.message_handler(content_types=['web_app_data'])
+"""@dp.message_handler(content_types=['web_app_data'])
 async def buy_nigger(message: types.Message):
 	await bot.send_invoice(web_app_message.chat.id, title='Title', description='Title', provider_token='f', currency='rub', need_email=True, need_phone_number=True, prices=LabeledPrice(label='Nigger', amount=696969), start_parameter='example', payload='some_invoice')
-
+"""
 ############################################ CALLBACKQUERY ######################################################################
 
 
