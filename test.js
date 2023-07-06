@@ -10,10 +10,15 @@ let item = "";
 let btn1 = document.getElementByID("btn_nigger");
 
 btn1.addEventListener("click", function() {
-	tg.MainButton.setText("Негр пашет круче всех");
-	item = "nigger";
-	tg.MainButton.show();
-
+	alert("main button clicked");
+	if (tg.MainButton.isVisible) {
+		tg.MainButton.hide();
+	}
+	else {
+		tg.MainButton.setText("Негр пашет круче всех");
+		item = "nigger";
+		tg.MainButton.show();
+	}
 });
 
 Telegram.WebApp.onEvent("mainButtonClicked", function(){
