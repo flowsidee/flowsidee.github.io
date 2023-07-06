@@ -18,4 +18,8 @@ btn_nigger.addEventListener("click", function() {
 		item = "nigger";
 		tg.MainButton.show();
 	}
-})
+});
+
+Telegram.WebApp.onEvent("mainButtonClicked", function(){
+	tg.sendData(item);
+});
