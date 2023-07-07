@@ -65,7 +65,7 @@
 	let tg = window.Telegram.WebApp;
 	//tg.expand();
 
-	var items = [];
+	let item = "";
 
 	tg.MainButton.text = "TEST";
 	tg.MainButton.textColor = "#FFFFFF";
@@ -73,21 +73,21 @@
 	let btn = document.getElementById("btn_buy_1");
 
 	btn.addEventListener('click', function(){
-		items.push('Элитный негр "Dick Gregory"')
-		if (items.length > 0){
-			if (tg.MainButton.isVisible == false){ 
-				tg.MainButton.setText("Завернуть в коробку");
-				tg.MainButton.show();
-			}
+		if (tg.MainButton.isVisible){ 
+			btn.innerHTML = 'Добавить'
+			item = "";
+			tg.MainButton.hide();
+		}
+		else {
+			btn.innerHTML = 'Убрать'
+			item = 'Элитный негр "Dick Gregory"';
+			tg.MainButton.setText("Завернуть в коробку");
+			tg.MainButton.show();
 		}
 	});
 
 	Telegram.WebApp.onEvent('mainButtonClicked', function(){
-		//alert(items)
-		try {tg.sendData(items);}
-		catch (error) {
-			alert(error)
-		}
+		tg.sendData(items)
 	});
 
 </script>
