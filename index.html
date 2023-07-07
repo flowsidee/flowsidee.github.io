@@ -65,39 +65,35 @@
 		<div class="inner">
 			<div class="item">
 				<img src="nigger.jpg" alt="Nigger_btn" class="img">
-				<button class="btn" id="btn12">Buy Nigger</button>
+				<button class="btn" id="btn_nigger">Buy Nigger</button>
 			</div>
 		</div>
 	</div>
 
-	<script type="application/javascript">
-		let tg = window.Telegram.WebApp;
-
-
-
-		tg.MainButton.textColor = "#FFFFF";
-		tg.MainButton.color = "#2cab37";
-		tg.MainButton.show();
-
-		let item = "";
-
-		let btn1 = document.getElementById("btn12");
-
-
-		btn1.addEventListener('click', function(){
-			if (tg.MainButton.isVisible){
-				tg.MainButton.hide()
-			}
-			else{
-			tg.MainButton.setText("Вы нег!");
-				tg.MainButton.show()
-			}
-			});
-
-
-		Telegram.WebApp.onEvent("mainButtonClicked", function(){
-			tg.sendData(item);
-		})
-	</script>
+	<div class="viewport-border"></div>
+	<div class="viewport-stable_border"></div>
 </body>
+<script type="application/javascript">
+	let tg = window.Telegram.WebApp;
+
+	tg.expand();
+	tg.MainButton.textColor = "#FFFFF";
+	tg.MainButton.color = "#2cab37";
+	let item = "";
+
+	let btn1 = document.getElementByID("btn_nigger");
+
+	btn1.addEventListener("click", function() {
+		if (tg.MainButton.isVisible) {
+			tg.MainButton.hide();
+		}
+		else {
+			tg.MainButton.setText("Завернуть в коробку");
+			item = "nigger";
+			tg.MainButton.show();
+		}
+	})
+
+	
+</script>
 </html>
