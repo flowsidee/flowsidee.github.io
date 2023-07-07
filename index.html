@@ -89,7 +89,8 @@
 	tg.expand();
 
 	let item = "";
-	let last_button = null;
+	let temp = false;
+	let last_button = null;temp=false;
 
 
 	tg.MainButton.text = "TEST";
@@ -102,8 +103,8 @@
 	let btn5 = document.getElementById("btn_buy_5");
 
 	btn1.addEventListener('click', function(){
-		if (last_button && last_button!=btn1){last_button.innerHTML = 'Выбрать';last_button.style.background = 'rgb(248, 168, 24)';last_button = null;}
-		if (tg.MainButton.isVisible){
+		if (last_button && last_button!=btn1){last_button.innerHTML = 'Выбрать';last_button.style.background = 'rgb(248, 168, 24)';last_button = null;temp=false;}
+		if (tg.MainButton.isVisible&&temp){
 			btn1.style.background = 'rgb(248, 168, 24)';
 			btn1.innerHTML = 'Выбрать';
 			item = "";
@@ -116,12 +117,13 @@
 			item = 'Элитный негр "Dick Gregory"';
 			tg.MainButton.setText("Завернуть в коробку");
 			tg.MainButton.show();
+			temp=true;
 		}
 	});
 
 
 	btn2.addEventListener('click', function(){
-		if (last_button && last_button!=btn2){last_button.innerHTML = 'Выбрать';last_button.style.background = 'rgb(248, 168, 24)';last_button = null;}
+		if (last_button && last_button!=btn2){last_button.innerHTML = 'Выбрать';last_button.style.background = 'rgb(248, 168, 24)';last_button = null;temp=false;}
 		if (tg.MainButton.isVisible){
 			btn2.style.background = 'rgb(248, 168, 24)';
 			btn2.innerHTML = 'Выбрать';
@@ -135,12 +137,13 @@
 			item = 'Комар <i>тарковский</i>';
 			tg.MainButton.setText("Завернуть в коробку");
 			tg.MainButton.show();
+			temp=true;
 		}
 	});
 
 
 	btn3.addEventListener('click', function(){
-		if (last_button && last_button!=btn3){last_button.innerHTML = 'Выбрать';last_button.style.background = 'rgb(248, 168, 24)';last_button = null;}
+		if (last_button && last_button!=btn3){last_button.innerHTML = 'Выбрать';last_button.style.background = 'rgb(248, 168, 24)';last_button = null;temp=false;}
 		if (tg.MainButton.isVisible){ 
 			btn3.style.background = 'rgb(248, 168, 24)';
 			btn3.innerHTML = 'Выбрать';
@@ -154,12 +157,13 @@
 			item = '<b>Лысый чертила</b>';
 			tg.MainButton.setText("Завернуть в коробку");
 			tg.MainButton.show();
+			temp=true;
 		}
 	});
 
 
 	btn4.addEventListener('click', function(){
-		if (last_button && last_button!=btn4){last_button.innerHTML = 'Выбрать';last_button.style.background = 'rgb(248, 168, 24)';last_button = null;}
+		if (last_button && last_button!=btn4){last_button.innerHTML = 'Выбрать';last_button.style.background = 'rgb(248, 168, 24)';last_button = null;temp=false;}
 		if (tg.MainButton.isVisible){ 
 			btn4.style.background = 'rgb(248, 168, 24)';
 			btn4.innerHTML = 'Выбрать';
@@ -173,12 +177,13 @@
 			item = '<b>Офисный</b> помощник';
 			tg.MainButton.setText("Завернуть в коробку");
 			tg.MainButton.show();
+			temp=true;
 		}
 	});
 
 
 	btn5.addEventListener('click', function(){
-		if (last_button && last_button!=btn5){last_button.innerHTML = 'Выбрать';last_button.style.background = 'rgb(248, 168, 24)';last_button = null;}
+		if (last_button && last_button!=btn5){last_button.innerHTML = 'Выбрать';last_button.style.background = 'rgb(248, 168, 24)';last_button = null;temp=false;}
 		if (tg.MainButton.isVisible){ 
 			btn5.style.background = 'rgb(248, 168, 24)';
 			btn5.innerHTML = 'Выбрать';
@@ -192,6 +197,7 @@
 			item = '<b>Осуждающий</b> друг';
 			tg.MainButton.setText("Завернуть в коробку");
 			tg.MainButton.show();
+			temp=true;
 		}
 	});
 
