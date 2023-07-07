@@ -23,16 +23,17 @@
 			display: grid;
 			grid-template-columns: 1fr 1fr;
 			grid-template-rows: 200px 200px 200px;
-			grid-gap: 20px;
+			grid-gap: 20%;
 		}
 
 		.img {
-			width: 150px;
+			max-width: 150px;
 			border-radius: 10px;
 		}
 
 		.gif {
-			width: 70;
+			width: 70px;
+			margin-bottom: 60px;
 		}
 
 		.item {
@@ -79,10 +80,6 @@
 				<img src="assets/istribitel.jpg" alt="btn_buy_5" class="img">
 				<button class="btn" id="btn_buy_5">Выбрать</button>
 			</div>
-			<div class="item">
-				<img src="assets/load.gif" alt="btn_buy_6" class="gif">
-				<button class="btn" id="btn_buy_6" disabled>Выбрать</button>
-			</div>
 		</div>
 	</div>
 </body>
@@ -101,7 +98,6 @@
 	let btn3 = document.getElementById("btn_buy_3");
 	let btn4 = document.getElementById("btn_buy_4");
 	let btn5 = document.getElementById("btn_buy_5");
-	let btn6 = document.getElementById("btn_buy_6");
 
 	btn1.addEventListener('click', function(){
 		if (tg.MainButton.isVisible){ 
@@ -172,21 +168,6 @@
 		else {
 			btn.innerHTML = 'Убрать';
 			item = '<b>Осуждающий</b> друг';
-			tg.MainButton.setText("Завернуть в коробку");
-			tg.MainButton.show();
-		}
-	});
-
-
-	btn6.addEventListener('click', function(){
-		if (tg.MainButton.isVisible){ 
-			btn.innerHTML = 'Выбрать';
-			item = "";
-			tg.MainButton.hide();
-		}
-		else {
-			btn.innerHTML = 'Убрать';
-			item = 'Nothing';
 			tg.MainButton.setText("Завернуть в коробку");
 			tg.MainButton.show();
 		}
