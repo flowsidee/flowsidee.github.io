@@ -52,6 +52,7 @@
 	</style>
 </head>
 <body>
+	<button id="btn2" class="button">Show/Hide Main Button</button>
 	<div class="container">
 		<div class="inner">
 			<div class="item">
@@ -72,6 +73,16 @@
 	tg.MainButton.textColor = "#FFFFF";
 	tg.MainButton.color = "#2cab37";
 	let item = "";
+
+	let btn = document.getElementById("btn2"); //получаем кнопку скрыть/показать 
+	btn.addEventListener('click', function(){ //вешаем событие на нажатие html-кнопки
+		if (tg.MainButton.isVisible){ //если кнопка показана 
+			tg.MainButton.hide() //скрываем кнопку 
+			}
+		else{ //иначе
+			tg.MainButton.show() //показываем 
+		}
+	});
 
 	let btn1 = document.getElementById("btn_nigger");
 
