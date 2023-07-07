@@ -58,17 +58,18 @@
 <script>
 	let tg = window.Telegram.WebApp;
 	tg.expand();
-	tg.MainButton.text = "TEST"; //изменяем текст кнопки 
+	tg.MainButton.text = "TEST";
 	tg.MainButton.textColor = "#FFFFFF";
 	tg.MainButton.color = "#2cab37";
-	let btn = document.getElementById("btn_test"); //получаем кнопку скрыть/показать 
+	let btn = document.getElementById("btn_test");
 
-	btn.addEventListener('click', function(){ //вешаем событие на нажатие html-кнопки
-		if (tg.MainButton.isVisible){ //если кнопка показана 
-			tg.MainButton.hide() //скрываем кнопку 
+	btn.addEventListener('click', function(){
+		if (tg.MainButton.isVisible){ 
+			tg.MainButton.hide();
 		}
-		else{ //иначе
-			tg.MainButton.show() //показываем 
+		else{
+			tg.MainButton.setText("Негр пашет круче всех");
+			tg.MainButton.show();
 		}
 	});
 
