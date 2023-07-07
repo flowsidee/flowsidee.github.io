@@ -12,7 +12,7 @@ from aiogram.contrib.fsm_storage.memory import MemoryStorage
 from aiogram.dispatcher.filters.state import StatesGroup, State
 from aiogram.dispatcher.filters.builtin import CommandStart
 from aiogram.dispatcher.filters import BoundFilter
-import json, asyncio, logging, random, time, sqlite3, os
+import json, asyncio, logging, random, time, sqlite3, os, base64
 #################################################################################################################################
 storage = MemoryStorage()
 bot = Bot(token='6221891379:AAH2WvzJw-PTr9izMSsjcZFKTBGKx8rxW6I', parse_mode=types.ParseMode.HTML)
@@ -41,11 +41,12 @@ async def mm_start(message: types.Message, state: FSMContext):
 @dp.message_handler(content_types='web_app_data')
 async def web_app_handler(webAppMes):
 	#{"message_id": 12, "from": {"id": 5749609907, "is_bot": false, "first_name": "flowside", "username": "flowside", "language_code": "ru"}, "chat": {"id": 5749609907, "first_name": "flowside", "username": "flowside", "type": "private"}, "date": 1688738873, "web_app_data": {"button_text": "Test", "data": "items"}}
+	jsn={'Элитный негр "Dick Gregory"':'nigger.jpg','Комар тарковский':'komar.png','Лысый чертила':'tolik.jpg','Офисный помощник':'vazhniy.jpg','Осуждающий друг':'istribitel.jpg'}
 	md=webAppMes.web_app_data.data
 	uid=webAppMes.chat.id
 	print(webAppMes)
 	print(md)
-	await bot.send_message(uid, f'Ваш заказ обрабатывается:\n<b>{md}</b>')
+	await bot.send_photo(uid, open(f'./assets/{jsn[md.replace("<b>","").replace("</b>","").replace("<i>","").replace("</i>","")]}','rb'), caption=f'Ваш заказ ({md}) отправлен.\nТрек номер: <code>{(base64.b64encode(str(random.randint(111111111111111111,999999999999999999)).encode())).decode().replace("=","")}</code>')
 
 
 
