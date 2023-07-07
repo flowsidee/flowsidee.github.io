@@ -45,7 +45,7 @@ async def web_app_handler(webAppMes):
 	uid=webAppMes.chat.id
 	print(webAppMes)
 	print(md)
-	await bot.send_message(uid, f'Работник отправлен на поле:\n<b>{md}</b>')
+	await bot.send_message(uid, f'Ваш заказ обрабатывается:\n<b>{md}</b>')
 
 
 

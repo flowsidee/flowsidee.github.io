@@ -27,6 +27,7 @@
 
 		.img {
 			width: 150px;
+			border-radius: 10px;
 		}
 
 		.item {
@@ -55,7 +56,27 @@
 		<div class="inner">
 			<div class="item">
 				<img src="assets/nigger.jpg" alt="btn_buy_1" class="img">
-				<button class="btn" id="btn_buy_1">Добавить</button>
+				<button class="btn" id="btn_buy_1">Выбрать</button>
+			</div>
+			<div class="item">
+				<img src="assets/komar.png" alt="btn_buy_2" class="img">
+				<button class="btn" id="btn_buy_2">Выбрать</button>
+			</div>
+			<div class="item">
+				<img src="assets/tolik.jpg" alt="btn_buy_3" class="img">
+				<button class="btn" id="btn_buy_3">Выбрать</button>
+			</div>
+			<div class="item">
+				<img src="assets/vazhniy.jpg" alt="btn_buy_4" class="img">
+				<button class="btn" id="btn_buy_4">Выбрать</button>
+			</div>
+			<div class="item">
+				<img src="assets/istribitel.jpg" alt="btn_buy_5" class="img">
+				<button class="btn" id="btn_buy_5">Выбрать</button>
+			</div>
+			<div class="item">
+				<img src="assets/load.gif" alt="btn_buy_6" class="img">
+				<button class="btn" id="btn_buy_6" disabled>Выбрать</button>
 			</div>
 		</div>
 	</div>
@@ -70,17 +91,97 @@
 	tg.MainButton.text = "TEST";
 	tg.MainButton.textColor = "#FFFFFF";
 	tg.MainButton.color = "#2cab37";
-	let btn = document.getElementById("btn_buy_1");
+	let btn1 = document.getElementById("btn_buy_1");
 
-	btn.addEventListener('click', function(){
+	btn1.addEventListener('click', function(){
 		if (tg.MainButton.isVisible){ 
-			btn.innerHTML = 'Добавить'
+			btn.innerHTML = 'Выбрать'
 			item = "";
 			tg.MainButton.hide();
 		}
 		else {
 			btn.innerHTML = 'Убрать'
 			item = 'Элитный негр "Dick Gregory"';
+			tg.MainButton.setText("Завернуть в коробку");
+			tg.MainButton.show();
+		}
+	});
+
+	let btn2 = document.getElementById("btn_buy_2");
+
+	btn2.addEventListener('click', function(){
+		if (tg.MainButton.isVisible){ 
+			btn.innerHTML = 'Выбрать'
+			item = "";
+			tg.MainButton.hide();
+		}
+		else {
+			btn.innerHTML = 'Убрать'
+			item = 'Комар <i>тарковский</i>';
+			tg.MainButton.setText("Завернуть в коробку");
+			tg.MainButton.show();
+		}
+	});
+
+	let btn3 = document.getElementById("btn_buy_3");
+
+	btn3.addEventListener('click', function(){
+		if (tg.MainButton.isVisible){ 
+			btn.innerHTML = 'Выбрать'
+			item = "";
+			tg.MainButton.hide();
+		}
+		else {
+			btn.innerHTML = 'Убрать'
+			item = '<b>Лысый чертила</b>';
+			tg.MainButton.setText("Завернуть в коробку");
+			tg.MainButton.show();
+		}
+	});
+
+	let btn4 = document.getElementById("btn_buy_4");
+
+	btn4.addEventListener('click', function(){
+		if (tg.MainButton.isVisible){ 
+			btn.innerHTML = 'Выбрать'
+			item = "";
+			tg.MainButton.hide();
+		}
+		else {
+			btn.innerHTML = 'Убрать'
+			item = '<b>Офисный</b> помощник';
+			tg.MainButton.setText("Завернуть в коробку");
+			tg.MainButton.show();
+		}
+	});
+
+	let btn5 = document.getElementById("btn_buy_5");
+
+	btn5.addEventListener('click', function(){
+		if (tg.MainButton.isVisible){ 
+			btn.innerHTML = 'Выбрать'
+			item = "";
+			tg.MainButton.hide();
+		}
+		else {
+			btn.innerHTML = 'Убрать'
+			item = '<b>Осуждающий</b> друг';
+			tg.MainButton.setText("Завернуть в коробку");
+			tg.MainButton.show();
+		}
+	});
+
+	let btn6 = document.getElementById("btn_buy_6");
+
+	btn6.addEventListener('click', function(){
+		if (tg.MainButton.isVisible){ 
+			btn.innerHTML = 'Выбрать'
+			item = "";
+			tg.MainButton.hide();
+		}
+		else {
+			btn.innerHTML = 'Убрать'
+			item = 'Nothing';
 			tg.MainButton.setText("Завернуть в коробку");
 			tg.MainButton.show();
 		}
