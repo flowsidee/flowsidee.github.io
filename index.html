@@ -54,8 +54,8 @@
 	<div class="container">
 		<div class="inner">
 			<div class="item">
-				<img src="nigger.jpg" alt="btn_buy_1" class="img">
-				<button class="btn" id="btn_buy_1">Buy Nigger</button>
+				<img src="assets/nigger.jpg" alt="btn_buy_1" class="img">
+				<button class="btn" id="btn_buy_1">Добавить</button>
 			</div>
 		</div>
 	</div>
@@ -65,20 +65,26 @@
 	let tg = window.Telegram.WebApp;
 	//tg.expand();
 
+	let items = [];
+
 	tg.MainButton.text = "TEST";
 	tg.MainButton.textColor = "#FFFFFF";
 	tg.MainButton.color = "#2cab37";
 	let btn = document.getElementById("btn_buy_1");
 
 	btn.addEventListener('click', function(){
-		if (tg.MainButton.isVisible){ 
-			tg.MainButton.hide();
-		}
-		else{
-			tg.MainButton.setText("Завернуть в коробку");
-			tg.MainButton.show();
+		items.push('Элитный негр "Dick Gregory"')
+		if (items.length > 0){
+			if (tg.MainButton.isVisible == false){ 
+				tg.MainButton.setText("Завернуть в коробку");
+				tg.MainButton.show();
+			}
 		}
 	});
+
+	Telegram.WebApp.onEvent('mainButtonClicked') function(){
+		tg.sendData(items);
+	}
 
 </script>
 

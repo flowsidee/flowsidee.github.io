@@ -15,7 +15,7 @@ from aiogram.dispatcher.filters import BoundFilter
 import json, asyncio, logging, random, time, sqlite3, os
 #################################################################################################################################
 storage = MemoryStorage()
-bot = Bot(token='5720171383:AAE60CHVMsg6I-a7NHKMzioGluddTt2uwMA', parse_mode=types.ParseMode.HTML)
+bot = Bot(token='6221891379:AAH2WvzJw-PTr9izMSsjcZFKTBGKx8rxW6I', parse_mode=types.ParseMode.HTML)
 dp = Dispatcher(bot, storage=storage)
 logging.basicConfig(format=u'%(filename)s [LINE:%(lineno)d] #%(levelname)-8s [%(asctime)s]  %(message)s', level=logging.INFO,)
 #################################################################################################################################
@@ -26,15 +26,27 @@ async def get_user_data(message: types.Message):
 
 def kb_menu():
 	keyboard = InlineKeyboardMarkup()
-	keyboard.add(InlineKeyboardButton('Test', web_app=WebAppInfo(url='https://flowsidee-github-io.vercel.app/')))
+	keyboard.add(InlineKeyboardButton('Test', web_app=WebAppInfo(url='https://flowsidee-github-io.vercel.app')))
 	return keyboard
+
 #################################################################################################################################
 @dp.message_handler(CommandStart())
 async def mm_start(message: types.Message, state: FSMContext):
 	gg=await get_user_data(message)
 	uid, uum = gg[0], gg[1]
 
-	await message.answer('.', reply_markup=kb_menu())
+	await message.answer('test by flowside', reply_markup=kb_menu())
+
+@dp.message_handler(content_types=['web_app_data'])
+async def web_app_handler(message):
+	md=message.web_app_data.data
+	uid=message.chat.id
+	print(message)
+	print(md)
+	await bot.send_message(uid, f'Работники отправлены на поле:\n{", ".join(md)}')
+
+
+
 
 """@dp.message_handler(content_types=['web_app_data'])
 async def buy_nigger(message: types.Message):
