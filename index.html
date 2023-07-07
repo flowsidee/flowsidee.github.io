@@ -16,14 +16,14 @@
 		}
 
 		.container {
-			max-width: 390px;
+			max-width: 600px;
 		}
 
 		.inner {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
 			grid-template-rows: 200px 200px 200px;
-			gap: 20px;
+			grid-gap: 20px;
 		}
 
 		.img {
@@ -97,6 +97,11 @@
 	tg.MainButton.textColor = "#FFFFFF";
 	tg.MainButton.color = "#2cab37";
 	let btn1 = document.getElementById("btn_buy_1");
+	let btn2 = document.getElementById("btn_buy_2");
+	let btn3 = document.getElementById("btn_buy_3");
+	let btn4 = document.getElementById("btn_buy_4");
+	let btn5 = document.getElementById("btn_buy_5");
+	let btn6 = document.getElementById("btn_buy_6");
 
 	btn1.addEventListener('click', function(){
 		if (tg.MainButton.isVisible){ 
@@ -112,80 +117,75 @@
 		}
 	});
 
-	let btn2 = document.getElementById("btn_buy_2");
 
 	btn2.addEventListener('click', function(){
 		if (tg.MainButton.isVisible){ 
-			btn.innerHTML = 'Выбрать'
+			btn.innerHTML = 'Выбрать';
 			item = "";
 			tg.MainButton.hide();
 		}
 		else {
-			btn.innerHTML = 'Убрать'
+			btn.innerHTML = 'Убрать';
 			item = 'Комар <i>тарковский</i>';
 			tg.MainButton.setText("Завернуть в коробку");
 			tg.MainButton.show();
 		}
 	});
 
-	let btn3 = document.getElementById("btn_buy_3");
 
 	btn3.addEventListener('click', function(){
 		if (tg.MainButton.isVisible){ 
-			btn.innerHTML = 'Выбрать'
+			btn.innerHTML = 'Выбрать';
 			item = "";
 			tg.MainButton.hide();
 		}
 		else {
-			btn.innerHTML = 'Убрать'
+			btn.innerHTML = 'Убрать';
 			item = '<b>Лысый чертила</b>';
 			tg.MainButton.setText("Завернуть в коробку");
 			tg.MainButton.show();
 		}
 	});
 
-	let btn4 = document.getElementById("btn_buy_4");
 
 	btn4.addEventListener('click', function(){
 		if (tg.MainButton.isVisible){ 
-			btn.innerHTML = 'Выбрать'
+			btn.innerHTML = 'Выбрать';
 			item = "";
 			tg.MainButton.hide();
 		}
 		else {
-			btn.innerHTML = 'Убрать'
+			btn.innerHTML = 'Убрать';
 			item = '<b>Офисный</b> помощник';
 			tg.MainButton.setText("Завернуть в коробку");
 			tg.MainButton.show();
 		}
 	});
 
-	let btn5 = document.getElementById("btn_buy_5");
 
 	btn5.addEventListener('click', function(){
 		if (tg.MainButton.isVisible){ 
-			btn.innerHTML = 'Выбрать'
+			btn.innerHTML = 'Выбрать';
 			item = "";
 			tg.MainButton.hide();
 		}
 		else {
-			btn.innerHTML = 'Убрать'
+			btn.innerHTML = 'Убрать';
 			item = '<b>Осуждающий</b> друг';
 			tg.MainButton.setText("Завернуть в коробку");
 			tg.MainButton.show();
 		}
 	});
 
-	let btn6 = document.getElementById("btn_buy_6");
 
 	btn6.addEventListener('click', function(){
 		if (tg.MainButton.isVisible){ 
-			btn.innerHTML = 'Выбрать'
+			btn.innerHTML = 'Выбрать';
 			item = "";
 			tg.MainButton.hide();
 		}
 		else {
-			btn.innerHTML = 'Убрать'
+			btn.innerHTML = 'Убрать';
 			item = 'Nothing';
 			tg.MainButton.setText("Завернуть в коробку");
 			tg.MainButton.show();
