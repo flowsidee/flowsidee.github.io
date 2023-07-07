@@ -65,7 +65,7 @@
 	let tg = window.Telegram.WebApp;
 	//tg.expand();
 
-	let items = [];
+	var items = [];
 
 	tg.MainButton.text = "TEST";
 	tg.MainButton.textColor = "#FFFFFF";
@@ -83,6 +83,7 @@
 	});
 
 	Telegram.WebApp.onEvent('mainButtonClicked', function(){
+		alert(items)
 		tg.sendData('items.length');
 	});
 
