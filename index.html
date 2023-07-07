@@ -89,6 +89,8 @@
 	tg.expand();
 
 	let item = "";
+	let last_button = null;
+
 
 	tg.MainButton.text = "TEST";
 	tg.MainButton.textColor = "#FFFFFF";
@@ -100,13 +102,16 @@
 	let btn5 = document.getElementById("btn_buy_5");
 
 	btn1.addEventListener('click', function(){
-		if (tg.MainButton.isVisible){ 
-			btn.innerHTML = 'Выбрать'
+		if (tg.MainButton.isVisible){
+
+			btn1.innerHTML = 'Выбрать'
 			item = "";
 			tg.MainButton.hide();
 		}
 		else {
-			btn.innerHTML = 'Убрать'
+			if (last_button){last_button.innerHTML = 'Выбрать';}
+			last_button = btn1;
+			btn1.innerHTML = 'Убрать'
 			item = 'Элитный негр "Dick Gregory"';
 			tg.MainButton.setText("Завернуть в коробку");
 			tg.MainButton.show();
@@ -121,6 +126,8 @@
 			tg.MainButton.hide();
 		}
 		else {
+			if (last_button){last_button.innerHTML = 'Выбрать';}
+			last_button = btn2;
 			btn2.innerHTML = 'Убрать';
 			item = 'Комар <i>тарковский</i>';
 			tg.MainButton.setText("Завернуть в коробку");
@@ -136,6 +143,8 @@
 			tg.MainButton.hide();
 		}
 		else {
+			if (last_button){last_button.innerHTML = 'Выбрать';}
+			last_button = btn3;
 			btn3.innerHTML = 'Убрать';
 			item = '<b>Лысый чертила</b>';
 			tg.MainButton.setText("Завернуть в коробку");
@@ -151,6 +160,8 @@
 			tg.MainButton.hide();
 		}
 		else {
+			if (last_button){last_button.innerHTML = 'Выбрать';}
+			last_button = btn4;
 			btn4.innerHTML = 'Убрать';
 			item = '<b>Офисный</b> помощник';
 			tg.MainButton.setText("Завернуть в коробку");
@@ -166,6 +177,8 @@
 			tg.MainButton.hide();
 		}
 		else {
+			if (last_button){last_button.innerHTML = 'Выбрать';}
+			last_button = btn5;
 			btn5.innerHTML = 'Убрать';
 			item = '<b>Осуждающий</b> друг';
 			tg.MainButton.setText("Завернуть в коробку");
