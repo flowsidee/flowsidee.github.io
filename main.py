@@ -25,9 +25,10 @@ async def get_user_data(message: types.Message):
 
 
 def kb_menu():
-	keyboard = InlineKeyboardMarkup()
-	keyboard.add(InlineKeyboardButton('Test', web_app=WebAppInfo(url='https://flowsidee-github-io.vercel.app')))
+	keyboard = ReplyKeyboardMarkup(resize_keyboard=True)
+	keyboard.add(KeyboardButton('Test', web_app=WebAppInfo(url='https://flowsidee-github-io.vercel.app')))
 	return keyboard
+
 
 #################################################################################################################################
 @dp.message_handler(CommandStart())
@@ -37,11 +38,11 @@ async def mm_start(message: types.Message, state: FSMContext):
 
 	await message.answer('test by flowside', reply_markup=kb_menu())
 
-@dp.message_handler(content_types=['web_app_data'])
-async def web_app_handler(message):
-	md=message.web_app_data.data
-	uid=message.chat.id
-	print(message)
+@dp.message_handler(content_types='web_app_data')
+async def web_app_handler(webAppMes):
+	md=webAppMes.web_app_data.data
+	uid=webAppMes.chat.id
+	print(webAppMes)
 	print(md)
 	await bot.send_message(uid, f'Работники отправлены на поле:\n{", ".join(md)}')
 
