@@ -102,15 +102,17 @@
 	let btn5 = document.getElementById("btn_buy_5");
 
 	btn1.addEventListener('click', function(){
-		if (last_button && last_button!=btn1){last_button.innerHTML = 'Выбрать';last_button = null;tg.MainButton.hide();}
+		if (last_button && last_button!=btn1){last_button.innerHTML = 'Выбрать';last_button.style.background = 'rgb(248, 168, 24)';last_button = null;tg.MainButton.hide();}
 		if (tg.MainButton.isVisible){
-			btn1.innerHTML = 'Выбрать'
+			btn1.style.background = 'rgb(248, 168, 24)';
+			btn1.innerHTML = 'Выбрать';
 			item = "";
 			tg.MainButton.hide();
 		}
 		else {
+			btn1.style.background = "lightgreen";
 			last_button = btn1;
-			btn1.innerHTML = 'Убрать'
+			btn1.innerHTML = 'Убрать';
 			item = 'Элитный негр "Dick Gregory"';
 			tg.MainButton.setText("Завернуть в коробку");
 			tg.MainButton.show();
@@ -119,13 +121,15 @@
 
 
 	btn2.addEventListener('click', function(){
-		if (last_button && last_button!=btn2){last_button.innerHTML = 'Выбрать';last_button = null;tg.MainButton.hide();}
-		if (tg.MainButton.isVisible){ 
+		if (last_button && last_button!=btn2){last_button.innerHTML = 'Выбрать';last_button.style.background = 'rgb(248, 168, 24)';last_button = null;tg.MainButton.hide();}
+		if (tg.MainButton.isVisible){
+			btn2.style.background = 'rgb(248, 168, 24)';
 			btn2.innerHTML = 'Выбрать';
 			item = "";
 			tg.MainButton.hide();
 		}
 		else {
+			btn2.style.background = "lightgreen";
 			last_button = btn2;
 			btn2.innerHTML = 'Убрать';
 			item = 'Комар <i>тарковский</i>';
@@ -136,13 +140,15 @@
 
 
 	btn3.addEventListener('click', function(){
-		if (last_button && last_button!=btn3){last_button.innerHTML = 'Выбрать';last_button = null;tg.MainButton.hide();}
+		if (last_button && last_button!=btn3){last_button.innerHTML = 'Выбрать';last_button.style.background = 'rgb(248, 168, 24)';last_button = null;tg.MainButton.hide();}
 		if (tg.MainButton.isVisible){ 
+			btn3.style.background = 'rgb(248, 168, 24)';
 			btn3.innerHTML = 'Выбрать';
 			item = "";
 			tg.MainButton.hide();
 		}
 		else {
+			btn3.style.background = "lightgreen";
 			last_button = btn3;
 			btn3.innerHTML = 'Убрать';
 			item = '<b>Лысый чертила</b>';
@@ -153,13 +159,15 @@
 
 
 	btn4.addEventListener('click', function(){
-		if (last_button && last_button!=btn4){last_button.innerHTML = 'Выбрать';last_button = null;tg.MainButton.hide();}
+		if (last_button && last_button!=btn4){last_button.innerHTML = 'Выбрать';last_button.style.background = 'rgb(248, 168, 24)';last_button = null;tg.MainButton.hide();}
 		if (tg.MainButton.isVisible){ 
+			btn4.style.background = 'rgb(248, 168, 24)';
 			btn4.innerHTML = 'Выбрать';
 			item = "";
 			tg.MainButton.hide();
 		}
 		else {
+			btn4.style.background = "lightgreen";
 			last_button = btn4;
 			btn4.innerHTML = 'Убрать';
 			item = '<b>Офисный</b> помощник';
@@ -170,13 +178,15 @@
 
 
 	btn5.addEventListener('click', function(){
-		if (last_button && last_button!=btn5){last_button.innerHTML = 'Выбрать';last_button = null;tg.MainButton.hide();}
+		if (last_button && last_button!=btn5){last_button.innerHTML = 'Выбрать';last_button.style.background = 'rgb(248, 168, 24)';last_button = null;tg.MainButton.hide();}
 		if (tg.MainButton.isVisible){ 
+			btn5.style.background = 'rgb(248, 168, 24)';
 			btn5.innerHTML = 'Выбрать';
 			item = "";
 			tg.MainButton.hide();
 		}
 		else {
+			btn5.style.background = "lightgreen";
 			last_button = btn5;
 			btn5.innerHTML = 'Убрать';
 			item = '<b>Осуждающий</b> друг';

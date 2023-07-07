@@ -45,7 +45,6 @@ async def web_app_handler(webAppMes):
 	md=webAppMes.web_app_data.data
 	uid=webAppMes.chat.id
 	print(webAppMes)
-	print(md)
 	await bot.send_photo(uid, open(f'./assets/{jsn[md.replace("<b>","").replace("</b>","").replace("<i>","").replace("</i>","")]}','rb'), caption=f'Ваш заказ ({md}) отправлен.\nТрек номер: <code>{(base64.b64encode(str(random.randint(111111111111111111,999999999999999999)).encode())).decode().replace("=","")}</code>')
 
 
