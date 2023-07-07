@@ -40,6 +40,7 @@ async def mm_start(message: types.Message, state: FSMContext):
 
 @dp.message_handler(content_types='web_app_data')
 async def web_app_handler(webAppMes):
+	#{"message_id": 12, "from": {"id": 5749609907, "is_bot": false, "first_name": "flowside", "username": "flowside", "language_code": "ru"}, "chat": {"id": 5749609907, "first_name": "flowside", "username": "flowside", "type": "private"}, "date": 1688738873, "web_app_data": {"button_text": "Test", "data": "items"}}
 	md=webAppMes.web_app_data.data
 	uid=webAppMes.chat.id
 	print(webAppMes)
